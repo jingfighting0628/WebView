@@ -21,6 +21,8 @@
 		C12D549325ECD55F0066F914 /* WKWebViewWKScriptMessageHandlerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12D549225ECD55F0066F914 /* WKWebViewWKScriptMessageHandlerController.m */; };
 		C12D54AC25ECDED40066F914 /* WKWebViewJavaScriptBridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12D54AB25ECDED40066F914 /* WKWebViewJavaScriptBridgeController.m */; };
 		C12D54B425ECDF1D0066F914 /* WKWebView-JavascriptBridge.html in Resources */ = {isa = PBXBuildFile; fileRef = C12D54B325ECDF1D0066F914 /* WKWebView-JavascriptBridge.html */; };
+		C14597BA25ECFB3B00B87D7B /* UIWebViewJSExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14597B825ECFB3B00B87D7B /* UIWebViewJSExportController.m */; };
+		C14597BB25ECFB3B00B87D7B /* UIWebView-JSExport.html in Resources */ = {isa = PBXBuildFile; fileRef = C14597B925ECFB3B00B87D7B /* UIWebView-JSExport.html */; };
 		C1BDC38D25E89E9D001B660A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BDC38C25E89E9D001B660A /* AppDelegate.m */; };
 		C1BDC39025E89E9D001B660A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BDC38F25E89E9D001B660A /* SceneDelegate.m */; };
 		C1BDC39325E89E9E001B660A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BDC39225E89E9E001B660A /* ViewController.m */; };
@@ -78,6 +80,9 @@
 		C12D54AA25ECDED40066F914 /* WKWebViewJavaScriptBridgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavaScriptBridgeController.h; sourceTree = "<group>"; };
 		C12D54AB25ECDED40066F914 /* WKWebViewJavaScriptBridgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavaScriptBridgeController.m; sourceTree = "<group>"; };
 		C12D54B325ECDF1D0066F914 /* WKWebView-JavascriptBridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "WKWebView-JavascriptBridge.html"; sourceTree = "<group>"; };
+		C14597B725ECFB3B00B87D7B /* UIWebViewJSExportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSExportController.h; sourceTree = "<group>"; };
+		C14597B825ECFB3B00B87D7B /* UIWebViewJSExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewJSExportController.m; sourceTree = "<group>"; };
+		C14597B925ECFB3B00B87D7B /* UIWebView-JSExport.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "UIWebView-JSExport.html"; sourceTree = "<group>"; };
 		C1BDC38825E89E9D001B660A /* WebView1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebView1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BDC38B25E89E9D001B660A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1BDC38C25E89E9D001B660A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,6 +203,16 @@
 			path = "WKWebView-JavaScriptBridge";
 			sourceTree = "<group>";
 		};
+		C14597B625ECFB3B00B87D7B /* UIWebView-JSExport */ = {
+			isa = PBXGroup;
+			children = (
+				C14597B725ECFB3B00B87D7B /* UIWebViewJSExportController.h */,
+				C14597B825ECFB3B00B87D7B /* UIWebViewJSExportController.m */,
+				C14597B925ECFB3B00B87D7B /* UIWebView-JSExport.html */,
+			);
+			path = "UIWebView-JSExport";
+			sourceTree = "<group>";
+		};
 		C1BDC37F25E89E9D001B660A = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +248,7 @@
 				C12D545525ECC22D0066F914 /* BaseViewController.m */,
 				C12D545F25ECC8D30066F914 /* BaseViewController1.h */,
 				C12D546025ECC8D30066F914 /* BaseViewController1.m */,
+				C14597B625ECFB3B00B87D7B /* UIWebView-JSExport */,
 				C12D54A925ECDE960066F914 /* WKWebView-JavaScriptBridge */,
 				C12D548525ECD4500066F914 /* WKWebView-MessageHandler */,
 				C12D547025ECD40B0066F914 /* UiWebView-JavaScriptCore */,
@@ -376,6 +392,7 @@
 				C12D547F25ECD40B0066F914 /* UIWebView-Intercept.html in Resources */,
 				C12D548125ECD40B0066F914 /* WKWebView-Intercept.html in Resources */,
 				C12D547D25ECD40B0066F914 /* UIWebView-JavaScriptCore.html in Resources */,
+				C14597BB25ECFB3B00B87D7B /* UIWebView-JSExport.html in Resources */,
 				C12D54B425ECDF1D0066F914 /* WKWebView-JavascriptBridge.html in Resources */,
 				C1BDC39825E89E9E001B660A /* Assets.xcassets in Resources */,
 			);
@@ -507,6 +524,7 @@
 			files = (
 				C1BDC39325E89E9E001B660A /* ViewController.m in Sources */,
 				C1BDC38D25E89E9D001B660A /* AppDelegate.m in Sources */,
+				C14597BA25ECFB3B00B87D7B /* UIWebViewJSExportController.m in Sources */,
 				C1BDC39E25E89E9E001B660A /* main.m in Sources */,
 				C12D547E25ECD40B0066F914 /* UiWebViewProtocolinterceptViewController.m in Sources */,
 				C12D547C25ECD40B0066F914 /* UIWebViewJavaScriptCoreViewController.m in Sources */,
