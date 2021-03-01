@@ -7,6 +7,10 @@
 
 #import "ViewController.h"
 #import "UIWebViewJavaScriptCoreViewController.h"
+#import "UiWebViewProtocolinterceptViewController.h"
+#import "WKWebViewProtocolinterceptViewController.h"
+#import "WKWebViewWKScriptMessageHandlerController.h"
+#import "WKWebViewJavaScriptBridgeController.h"
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSourceArray;
@@ -21,7 +25,8 @@
     _dataSourceArray = @[@"iOS与JS交互UIWebView协议拦截",
     @"使用JavaScriptCore框架",
     @"WKWebView协议拦截",
-    @"WKScriptMessageHandle协议"];
+    @"WKScriptMessageHandle协议",
+    @"WKWebViewJSBridge第三方框架"];
     
     [self setUpTableView];
 
@@ -74,7 +79,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        
+        UiWebViewProtocolinterceptViewController *vc = [[UiWebViewProtocolinterceptViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 1)
     {
@@ -83,10 +89,17 @@
     }
     else if (indexPath.row == 2)
     {
-        
+        WKWebViewProtocolinterceptViewController *vc = [[WKWebViewProtocolinterceptViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 3)
+    {
+        WKWebViewWKScriptMessageHandlerController *vc = [[WKWebViewWKScriptMessageHandlerController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else{
-        
+        WKWebViewJavaScriptBridgeController *vc = [[WKWebViewJavaScriptBridgeController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

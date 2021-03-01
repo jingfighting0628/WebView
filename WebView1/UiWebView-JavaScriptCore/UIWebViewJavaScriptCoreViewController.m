@@ -7,8 +7,8 @@
 
 #import "UIWebViewJavaScriptCoreViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-@interface UIWebViewJavaScriptCoreViewController ()<UIWebViewDelegate>
-@property (nonatomic, strong) UIWebView *webView;
+@interface UIWebViewJavaScriptCoreViewController ()
+
 @end
 
 @implementation UIWebViewJavaScriptCoreViewController
@@ -16,22 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
-    
-    _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    //_webView.backgroundColor = [UIColor blueColor];
-    _webView.delegate = self;
-    
-    [self.view addSubview:_webView];
-    
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"UIWebView-JavaScriptCore" withExtension:@"html"];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
-    [_webView loadRequest:request];
+    [self.webView loadRequest:request];
     
 }
 -(void)login
@@ -39,7 +26,9 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
        
         JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-        
+        //! JSContext -evaluateScript:方式调用JS方法
+        // [context evaluateScript:[NSString stringWithFormat:@"ocToJs('loginSucceed', 'oc_tokenString')"]];
+        //! JSValue -callWithArguments:方式调用JS方法
         [context[@"ocToJs"] callWithArguments:@[@"LoginSucceed",@"oc_tokenString"]];
         
         
@@ -78,20 +67,6 @@
     [self addActionWithContext:context];
 }
 
-- (void) showAlertWithTitle:(NSString *)title message:(NSString *)message cancelHandler:(void(^)(void))handler
-{
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        if (handler) {
-            handler();
-        }
-    }];
-    [alertController addAction:cancelAction];
-    [self presentViewController:alertController animated:YES completion:^{
-        
-    }];
-    
-}
+
 
 @end
