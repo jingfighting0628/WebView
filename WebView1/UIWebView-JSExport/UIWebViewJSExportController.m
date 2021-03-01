@@ -24,6 +24,7 @@ JSExportAs(jsToOc,- (void)jsToOc:(NSString *)action params:(NSString *)params);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"JSExport协议";
     self.url = @"UIWebView-JSExport";
     
 }

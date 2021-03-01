@@ -15,7 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"WKWebView-Intercept";
+    
+    self.title = @"WKWebView-Intercept协议拦截";
     // Do any additional setup after loading the view.
     self.url = @"WKWebView-Intercept";
 }

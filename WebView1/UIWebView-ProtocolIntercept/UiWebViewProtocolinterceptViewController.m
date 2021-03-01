@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"UIWebView协议拦截";
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"UIWebView-Intercept" withExtension:@"html"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     

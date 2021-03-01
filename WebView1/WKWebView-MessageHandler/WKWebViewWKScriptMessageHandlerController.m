@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"WKScriptMessageHandler";
     self.url = @"WKWebView-WKScriptMessageHandler";
 }
 -(void)viewWillAppear:(BOOL)animated

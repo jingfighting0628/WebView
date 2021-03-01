@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "UIWebViewJavaScriptCoreViewController.h"
+#import "UIWebViewJSExportController.h"
 #import "UiWebViewProtocolinterceptViewController.h"
 #import "WKWebViewProtocolinterceptViewController.h"
 #import "WKWebViewWKScriptMessageHandlerController.h"
@@ -24,6 +25,7 @@
     self.title = @"Native WebView HyBird ";
     _dataSourceArray = @[@"iOS与JS交互UIWebView协议拦截",
     @"使用JavaScriptCore框架",
+    @"使用JxEport协议",
     @"WKWebView协议拦截",
     @"WKScriptMessageHandle协议",
     @"WKWebViewJSBridge第三方框架"];
@@ -89,10 +91,15 @@
     }
     else if (indexPath.row == 2)
     {
-        WKWebViewProtocolinterceptViewController *vc = [[WKWebViewProtocolinterceptViewController alloc] init];
+        UIWebViewJSExportController *vc = [[UIWebViewJSExportController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 3)
+    {
+        WKWebViewProtocolinterceptViewController *vc = [[WKWebViewProtocolinterceptViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 4)
     {
         WKWebViewWKScriptMessageHandlerController *vc = [[WKWebViewWKScriptMessageHandlerController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];

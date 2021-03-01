@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"UIWebViewJavaScriptCore";
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"UIWebView-JavaScriptCore" withExtension:@"html"];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
     [self.webView loadRequest:request];

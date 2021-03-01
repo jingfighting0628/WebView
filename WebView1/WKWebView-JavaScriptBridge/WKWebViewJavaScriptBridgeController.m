@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"WKWebViewJavascriptBridge";
     self.url = @"WKWebView-JavascriptBridge";
     
     self.bridge = [WKWebViewJavascriptBridge bridgeForWebView:self.webView];
