@@ -151,8 +151,8 @@
 		C12D547025ECD40B0066F914 /* UiWebView-JavaScriptCore */ = {
 			isa = PBXGroup;
 			children = (
-				C12D547125ECD40B0066F914 /* UIWebViewJavaScriptCoreViewController.m */,
 				C12D547225ECD40B0066F914 /* UIWebViewJavaScriptCoreViewController.h */,
+				C12D547125ECD40B0066F914 /* UIWebViewJavaScriptCoreViewController.m */,
 				C12D547325ECD40B0066F914 /* UIWebView-JavaScriptCore.html */,
 			);
 			path = "UiWebView-JavaScriptCore";
